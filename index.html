@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>E-Portfolio - ประวัติส่วนตัว</title>
+  <style>
+    :root{
+      --accent:#2563eb;
+      --muted:#6b7280;
+      --card:#ffffff;
+      --bg:#f3f4f6;
+      --glass:rgba(255,255,255,0.7);
+    }
+    *{box-sizing:border-box}
+    body{font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; margin:0;background:var(--bg);color:#111}
+    header{background:linear-gradient(90deg,var(--accent),#06b6d4);color:#fff;padding:28px 20px}
+    .container{max-width:1000px;margin:20px auto;padding:0 16px}
+    .brand{display:flex;gap:16px;align-items:center}
+    .avatar{width:96px;height:96px;border-radius:12px;overflow:hidden;flex-shrink:0;border:4px solid rgba(255,255,255,0.18)}
+    .avatar img{width:100%;height:100%;object-fit:cover}
+    h1{margin:0;font-size:24px}
+    p.lead{margin:6px 0 0;color:rgba(255,255,255,0.95)}
+
+    main{display:grid;grid-template-columns:1fr 320px;gap:24px;margin-top:18px}
+    @media(max-width:900px){main{grid-template-columns:1fr}}
+
+    .card{background:var(--card);border-radius:12px;padding:18px;box-shadow:0 6px 18px rgba(15,23,42,0.06)}
+    section + section{margin-top:16px}
+
+    /* Personal summary */
+    .summary{display:flex;flex-direction:column;gap:8px}
+    .meta{display:flex;flex-wrap:wrap;gap:10px;color:var(--muted);font-size:14px}
+
+    /* Skills */
+    .skills{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
+    .skill{background:#f8fafc;padding:10px;border-radius:8px;font-size:14px}
+
+    /* Gallery */
+    .gallery{display:grid;grid-template-columns:repeat(2,1fr);gap:8px}
+    .gallery img{width:100%;height:120px;object-fit:cover;border-radius:8px}
+
+    /* Contact */
+    .contact-list{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:8px}
+    .contact-list li{display:flex;gap:10px;align-items:center}
+    .btn{display:inline-block;padding:8px 12px;background:var(--accent);color:#fff;border-radius:8px;text-decoration:none}
+
+    footer{margin-top:30px;padding:20px;text-align:center;color:var(--muted);font-size:14px}
+
+    /* Small helpers */
+    .muted{color:var(--muted)}
+    .grid-2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+    @media(max-width:600px){.grid-2{grid-template-columns:1fr}}
+
+    /* Headings */
+    h2{margin:0 0 8px 0;font-size:18px}
+    .badge{display:inline-block;padding:6px 8px;background:#eef2ff;color:#3730a3;border-radius:6px;font-size:13px}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container brand">
+      <div class="avatar">
+        <link rel="stylesheet" href="style.css">
+        <img src="(k1).jpg" alt="Avatar">
+      </div>
+      <div>
+        <h1>นาย จิรศักดิ์ เข็มทอง</h1>
+        <p class="lead">ผู้ดูแลระบบต่างๆของ เซิร์ฟเวอร์ / วิทยาการคอมพิวเตอร์ / มหาวิทยาลัยเทคโนโลยี พระมหาไถ่ พัทยา</p>
+        <div class="meta">
+          <span class="badge">เกิดเมื่อปี: 2006</span>
+          <span class="badge">จังหวัด: ชลบุรี</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="container">
+    <main>
+      <!-- Left column: เนื้อหาหลัก -->
+      <div>
+        <!-- ประวัติส่วนตัว -->
+        <section class="card">
+          <h2>ประวัติส่วนตัว</h2>
+          <div class="summary">
+            <p>สาขาที่เรียน สารสนเทค ด้านที่ชอบ คอมพิวเตอร์</p>
+            <div class="meta">
+              <div>วันเกิด: 14 มกราคม 2006</div>
+              <div>อีเมล: vouppvoupp@gmail.com</div>
+              <div>โทร: 083-708-8399</div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ประวัติการศึกษา -->
+        <section class="card">
+          <h2>ประวัติการศึกษา</h2>
+          <ol style="margin:0 0 0 16px;padding:0">
+            <li><strong>ระดับปัจจุบัน:</strong> ระดับการศึกษา ปี2, สาขาสารสนเทค, สถาบันวิทยาลัยพระมหาไถ่ พัทยา (ปีที่เข้าศึกษา 2567 ปัจจุบัน)</li>
+            <li><strong>ระดับก่อนหน้า:</strong> โรงเรียนบ้านบึงมนูญ อาคารวิทยา มัธยมศึกษา ปีที่3 (จบปีที่ม.3)</li>
+            <li><strong>มัธยมต้น:</strong> โรงเรียนบ้านบึงมนูญ อาคารวิทยา มัธยมศึกษา ปีที่3 </li>
+          </ol>
+        </section>
+
+        <!-- ความสามารถ -->
+        <section class="card">
+          <h2>ความสามารถ</h2>
+          <div class="grid-2">
+            <div>
+              <h3 style="font-size:15px;margin-bottom:6px">ทักษะคอมพิวเตอร์</h3>
+              <div class="skills">
+                <div class="skill">โปรแกรมสำนักงาน (เช่น Google Workspace)</div>
+                <div class="skill">โปรแกรมเฉพาะทาง (เช่น CSS,HTML,JS)</div>
+                <div class="skill">พื้นฐานการเขียนโปรแกรม (เช่น Python, JavaScript)</div>
+              </div>
+            </div>
+
+            <div>
+              <h3 style="font-size:15px;margin-bottom:6px">ทักษะอื่นๆ</h3>
+              <div class="skills">
+                <div class="skill">กราฟิก: Photoshop / Illustrator</div>
+                <div class="skill">การออกแบบ: ผู้ใช้งาน</div>
+                <div class="skill">กีฬา: หมากรุก ชอบการวางแผน</div>
+                <div class="skill">ภาษา: ไทย (หน่อยนิด), อังกฤษ (ไม่ได้เลย)</div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ประวัติการอบรม -->
+        <section class="card">
+          <h2>ประวัติการอบรมและเกียรติบัตร</h2>
+          <ul style="margin:0 0 0 16px;padding:0">
+            <li>ชื่อโครงการอบรม / สถาบัน - ปี (แนบเกียรติบัตร)</li>
+            <li>Workshop / Bootcamp - หัวข้อ (ปี)</li>
+            <li>กิจกรรม/ค่าย ฝึกอบรมที่สำคัญ (ปี)</li>
+          </ul>
+         <p class="muted" style="margin-top:8px">* แนบไฟล์เกียรติบัตรหรือภาพกิจกรรมได้ในส่วน Gallery ด้านล่าง</p>
+        </section> 
+
+        <!-- รูปภาพจิตอาสา -->
+        <section class="card">
+          <h2>รูปภาพกิจกรรมจิตอาสา</h2>
+          <div class="gallery">
+            <!-- เปลี่ยน src เป็น path รูปจริง -->
+            <img src="46.jpg" alt="จิตอาสา1">
+            <img src="58.jpg" alt="จิตอาสา2">
+            <img src="097.jpg" alt="จิตอาสา3">
+            <img src="0117.jpg" alt="จิตอาสา4">
+          </div>
+        </section>
+
+        <!-- รูปภาพการเข้าร่วมกิจกรรม -->
+        <section class="card">
+          <h2>รูปภาพการเข้าร่วมกิจกรรม</h2>
+          <div class="gallery">
+            <img src="05.jpg" alt="กิจกรรม1">
+            <img src="011.jpg" alt="กิจกรรม2">
+            <img src="012.jpg" alt="กิจกรรม3">
+            <img src="k2.jpg" alt="กิจกรรม4">
+          </div>
+        </section>
+
+      </div>
+
+      <!-- Right column: Sidebar -->
+      <aside>
+        <div class="card">
+          <h2>ข้อมูลติดต่อ (Contact)</h2>
+          <ul class="contact-list">
+            <li><strong>อีเมล:</strong> <a href="mailto:vouppvoupp@gmail.com">vouppvoupp@gmail.com</a></li>
+            <li><strong>โทร:</strong> 083-708-8399</li>
+            <li><strong>Facebook:</strong> บัง'เก่งไง </li>
+            <li><strong>instagram:</strong> @mr_jirasak</li>
+          </ul>
+          <div style="margin-top:12px">
+            <a href="https://example.com">ดาวน์โหลดไฟล์บันทึกข้อความ</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <h2>ความสนใจเพิ่มเติม</h2>
+          <p class="muted">ระบุกิจกรรมหรือเรื่องที่คุณสนใจเพิ่มเติม เช่น งานเอกสาร, วิจัยข้อมูล, ธุรกิจ</p>
+        </div>
+
+        <div class="card">
+          <h2>ลิ้งค์งาน</h2>
+          <ul style="margin:0;padding:0 0 0 16px">
+            <li><a href="#">ผลงานการออกแบบ </a></li>
+          </ul>
+        </div>
+      </aside>
+    </main>
+
+    <footer>
+      <div class="card" style="background:transparent;box-shadow:none;padding:12px">
+        <p>© 2025 จิรศักดิ์ เข็มทอง | E-Portfolio | อัพเดทเมื่อ: วันที่ 27/8/2025</p>
+        <p class="muted">ส่งงานก่อนสัปดาห์ก่อนสอบตามที่กำหนด</p>
+      </div>
+    </footer>
+  </div>
+<script- src="script.js"></script>
+  <!-- หมายเหตุ: แก้ไขข้อความ รูปภาพ และลิงค์ตามข้อมูลจริงของผู้ทำ -->
+</body>
+</html>
